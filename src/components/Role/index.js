@@ -6,7 +6,6 @@ import Button from '../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
 import Cookies from 'universal-cookie';
 
@@ -18,6 +17,7 @@ const Dropdown = () => {
         navigate('/');
         cookies.remove('refresh_token');
         localStorage.removeItem('access_token');
+        window.location.reload();
     };
     return (
         <span className="d-flex flex-column bg-light border rounded-3">
