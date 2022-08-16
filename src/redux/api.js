@@ -21,8 +21,8 @@ export const loginUser = async (user, dispatch, navigate) => {
                 });
                 localStorage.setItem('access_token', access_token);
                 dispatch(loginSuccess(others));
-                window.location.reload();
                 navigate('/home');
+                window.location.reload();
             })
             .catch((err) => {
                 dispatch(loginFailure(err.response.data));
