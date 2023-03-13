@@ -199,7 +199,7 @@ function FindGrade() {
                                     Xuất excel
                                 </ButtonBootstrap>
                             </FormGroup>
-                            {resultStudentID && (
+                            {resultStudentID.length >= 1 && (
                                 <>
                                     <Title
                                         title={
@@ -315,9 +315,9 @@ function FindGrade() {
                                         Xuất excel
                                     </ButtonBootstrap>
                                 </FormGroup>
-                                {resultClass && (
+                                {resultClass.length >= 1 && (
                                     <>
-                                        <Title title={<>Điểm thi lớp: {resultClass[0].class}</>} />
+                                        <Title title={<>Điểm thi lớp: {resultClass[0]?.class}</>} />
                                         <div className="scroll">
                                             <Table bordered className="text-center table-responsive">
                                                 <thead>
@@ -441,9 +441,9 @@ function FindGrade() {
                                     </ButtonBootstrap>
                                 </FormGroup>
                             </Row>
-                            {resultSubject && (
+                            {resultSubject.length >= 1 && (
                                 <>
-                                    <Title title={<>Điểm thi môn: {resultSubject[0].subject.name}</>} />
+                                    <Title title={<>Điểm thi môn: {resultSubject[0]?.subject.name}</>} />
                                     <div className="scroll">
                                         <Table bordered className="text-center table-responsive">
                                             <thead>
