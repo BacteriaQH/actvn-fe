@@ -199,7 +199,7 @@ function FindGrade() {
                                     Xuất excel
                                 </ButtonBootstrap>
                             </FormGroup>
-                            {resultStudentID.length >= 1 ? (
+                            {resultStudentID ? (
                                 <>
                                     <Title
                                         title={
