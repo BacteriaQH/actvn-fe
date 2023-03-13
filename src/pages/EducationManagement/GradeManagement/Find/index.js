@@ -199,7 +199,7 @@ function FindGrade() {
                                     Xuất excel
                                 </ButtonBootstrap>
                             </FormGroup>
-                            {resultStudentID.length >= 1 && (
+                            {resultStudentID.length >= 1 ? (
                                 <>
                                     <Title
                                         title={
@@ -276,6 +276,10 @@ function FindGrade() {
                                         </Table>
                                     </div>
                                 </>
+                            ) : (
+                                <h1>
+                                    <strong>Không có dữ liệu</strong>
+                                </h1>
                             )}
                         </Tab>
                         <Tab eventKey={'class'} title="Theo từng lớp">
@@ -315,7 +319,7 @@ function FindGrade() {
                                         Xuất excel
                                     </ButtonBootstrap>
                                 </FormGroup>
-                                {resultClass.length >= 1 && (
+                                {resultClass.length >= 1 ? (
                                     <>
                                         <Title title={<>Điểm thi lớp: {resultClass[0]?.class}</>} />
                                         <div className="scroll">
@@ -384,6 +388,10 @@ function FindGrade() {
                                             </Table>
                                         </div>
                                     </>
+                                ) : (
+                                    <h1>
+                                        <strong>Không có dữ liệu</strong>
+                                    </h1>
                                 )}
                             </Row>
                         </Tab>
@@ -441,7 +449,7 @@ function FindGrade() {
                                     </ButtonBootstrap>
                                 </FormGroup>
                             </Row>
-                            {resultSubject.length >= 1 && (
+                            {resultSubject.length >= 1 ? (
                                 <>
                                     <Title title={<>Điểm thi môn: {resultSubject[0]?.subject.name}</>} />
                                     <div className="scroll">
@@ -500,6 +508,10 @@ function FindGrade() {
                                         </Table>
                                     </div>
                                 </>
+                            ) : (
+                                <h1>
+                                    <strong>Không có dữ liệu</strong>
+                                </h1>
                             )}
                         </Tab>
                     </Tabs>
